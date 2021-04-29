@@ -66,6 +66,7 @@ def test_epoch(model, testLoader):
     return pred_epoch, gold_epoch
 
 
+
 def train(trainLoaders, model, optimizer, lossFunc):
     for i in range(len(trainLoaders)):
         model, optimizer = train_epoch(model, trainLoaders[i], optimizer, lossFunc)
@@ -78,4 +79,5 @@ def test(testLoaders, model):
         pred_epoch, gold_epoch = test_epoch(model, testLoaders[i])
         prediction = torch.cat([prediction, pred_epoch])
         ground_truth = torch.cat([ground_truth, gold_epoch])
+    print("Deep Knowledge Tracing:",type(prediction))
     performance(ground_truth, prediction)

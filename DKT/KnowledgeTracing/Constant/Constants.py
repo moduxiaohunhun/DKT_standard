@@ -22,10 +22,11 @@ numbers = {
 DATASET = datasets['static2011']
 NUM_OF_QUESTIONS = numbers['static2011']
 # the max step of RNN model
-MAX_STEP = 50
+MAX_STEP = 8000
 BATCH_SIZE = 64
 LR = 0.002
-EPOCH = 1000
+# EPOCH = 1000
+EPOCH = 10
 #input dimension
 INPUT = NUM_OF_QUESTIONS * 2
 # embedding dimension
