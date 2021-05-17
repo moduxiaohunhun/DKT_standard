@@ -1,5 +1,6 @@
-Dpath = '../../KTDataset'
-
+# Dpath = '../../KTDataset'
+Dpath ='/content/DKT_standard/DKT/KTDataset'
+    
 datasets = {
     'assist2009' : 'assist2009',
     'assist2015' : 'assist2015',
