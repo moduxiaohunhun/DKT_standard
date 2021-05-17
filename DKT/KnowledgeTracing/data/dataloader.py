@@ -1,5 +1,6 @@
 import sys
-sys.path.append('../')
+# sys.path.append('../')
+sys.path.append('/content/DKT_standard/DKT/KnowledgeTracing/')
 import torch
 import torch.utils.data as Data
 from Constant import Constants as C
