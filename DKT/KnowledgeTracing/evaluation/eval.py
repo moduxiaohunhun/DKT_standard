@@ -1,5 +1,6 @@
 import sys
-sys.path.append('../')
+# sys.path.append('../')
+sys.path.append('/content/DKT_standard/DKT/KnowledgeTracing/')
 import tqdm
 import torch
 import torch.nn as nn
