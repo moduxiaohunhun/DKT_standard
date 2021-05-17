@@ -1,5 +1,6 @@
 import sys
-sys.path.append('../')
+# sys.path.append('../')
+sys.path.append('/content/DKT_standard/DKT/KnowledgeTracing/')
 from model.RNNModel import DKT
 from data.dataloader import getTrainLoader, getTestLoader, getLoader
 from Constant import Constants as C
