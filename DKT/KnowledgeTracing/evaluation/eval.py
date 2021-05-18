@@ -7,8 +7,23 @@ import torch.nn as nn
 from sklearn import metrics
 from torch.autograd import Variable
 from Constant import Constants as C
+import numpy as np
 
 def performance(ground_truth, prediction):
+     aaa = ground_truth.detach().numpy()
+    bbb = prediction.detach().numpy()
+    ccc = 0
+    ddd = 0
+    for i in range(aaa.shape[0]):
+      ccc+=(bbb[i]-aaa[i])**2
+      ddd+=(np.random.random()-aaa[i])**2
+    ccc/=aaa.shape[0]
+    ddd/=aaa.shape[0]
+    ccc=ccc**0.5
+    ddd=ddd**0.5
+    print("RMSE: ",ccc)
+    print("random: ",ddd)
+    
     fpr, tpr, thresholds = metrics.roc_curve(ground_truth.detach().numpy(), prediction.detach().numpy())
     auc = metrics.auc(fpr, tpr)
 
