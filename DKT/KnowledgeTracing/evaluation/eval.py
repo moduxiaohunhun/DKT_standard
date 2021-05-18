@@ -10,7 +10,7 @@ from Constant import Constants as C
 import numpy as np
 
 def performance(ground_truth, prediction):
-     aaa = ground_truth.detach().numpy()
+    aaa = ground_truth.detach().numpy()
     bbb = prediction.detach().numpy()
     ccc = 0
     ddd = 0
